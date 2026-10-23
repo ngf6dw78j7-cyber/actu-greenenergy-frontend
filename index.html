@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Actu-GreenEnergy — l'actualité des énergies renouvelables au Sénégal, en Afrique et dans le monde.">
+  <title>Actu-GreenEnergy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="leaf">🌿</span><span>Actu-<b>GreenEnergy</b></span></div>
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#categories">Catégories</a>
+    <a href="#senegal">Sénégal</a>
+    <a href="#afrique">Afrique</a>
+    <a href="#monde">Monde</a>
+  </nav>
+  <button class="menu-btn" aria-label="Menu">☰</button>
+</header>
+
+<main id="accueil">
+  <section class="hero">
+    <div>
+      <span class="eyebrow">🌍 ACTUALITÉ ÉNERGÉTIQUE</span>
+      <h1>L’énergie renouvelable,<br><span>au cœur de l’actualité.</span></h1>
+      <p>Suivez les dernières informations sur le solaire, l’éolien, l’hydroélectricité, la biomasse, le stockage et l’hydrogène vert — du Sénégal au reste du monde.</p>
+      <div class="search">
+        <input id="searchInput" type="search" placeholder="Rechercher une actualité…">
+        <button onclick="searchNews()">Rechercher</button>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="sun">☀️</div>
+      <h3>Une transition énergétique mondiale</h3>
+      <p>Des projets locaux aux grandes tendances internationales.</p>
+    </div>
+  </section>
+
+  <section class="section" id="categories">
+    <div class="section-head">
+      <div><span class="eyebrow">EXPLORER</span><h2>Catégories</h2></div>
+      <div class="filters">
+        <button class="active" onclick="filterCategory('Toutes', this)">Toutes</button>
+        <button onclick="filterCategory('Solaire', this)">☀️ Solaire</button>
+        <button onclick="filterCategory('Éolien', this)">🌬️ Éolien</button>
+        <button onclick="filterCategory('Hydro', this)">💧 Hydro</button>
+        <button onclick="filterCategory('Biomasse', this)">🌱 Biomasse</button>
+        <button onclick="filterCategory('Stockage', this)">🔋 Stockage</button>
+        <button onclick="filterCategory('Hydrogène', this)">⚡ Hydrogène</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="news">
+    <div class="section-head">
+      <div><span class="eyebrow">À LA UNE</span><h2>Dernières actualités</h2></div>
+      <span id="resultCount" class="count"></span>
+    </div>
+    <div id="newsGrid" class="news-grid"></div>
+  </section>
+
+  <section class="section regions">
+    <div class="region-card senegal" id="senegal">
+      <span>🇸🇳</span><div><h3>Sénégal</h3><p>Projets, politiques, solaire, éolien, accès à l’énergie et investissements.</p></div>
+      <a href="#news" onclick="filterRegion('Sénégal')">Explorer →</a>
+    </div>
+    <div class="region-card africa" id="afrique">
+      <span>🌍</span><div><h3>Afrique</h3><p>Les projets et innovations qui transforment le secteur énergétique africain.</p></div>
+      <a href="#news" onclick="filterRegion('Afrique')">Explorer →</a>
+    </div>
+    <div class="region-card world" id="monde">
+      <span>🌎</span><div><h3>Reste du monde</h3><p>Europe, Asie, Amériques, Moyen-Orient et Océanie.</p></div>
+      <a href="#news" onclick="filterRegion('Monde')">Explorer →</a>
+    </div>
+  </section>
+
+  <section class="section about">
+    <div>
+      <span class="eyebrow">LE CONCEPT</span>
+      <h2>Une seule plateforme pour suivre la transition énergétique.</h2>
+    </div>
+    <p>Actu-GreenEnergy centralise les actualités provenant de sources fiables, les classe par technologie et par région, puis pourra les résumer automatiquement. Le Sénégal et l’Afrique sont mis en avant, sans exclure le reste du monde.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="brand"><span class="leaf">🌿</span>Actu-<b>GreenEnergy</b></div>
+  <p>© 2026 Actu-GreenEnergy · Prototype</p>
+</footer>
+<script>window.API_BASE = 
+"https://actu-greenenergy-backend.onrender.com";</script>
+<script src="app.js"></script>
+</body>
+</html>
